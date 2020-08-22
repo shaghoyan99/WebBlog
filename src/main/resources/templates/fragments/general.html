@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>general</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<div th:fragment="menu">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Blog</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="#">Главная</a>
+            <a class="p-2 text-dark" href="#">Блог</a>
+            <a class="p-2 text-dark" href="#">Про Нас</a>
+        </nav>
+        <a class="btn btn-outline-primary" href="#" th:if="${user == null}">Sign up</a>
+        <a class="btn btn-outline-primary" href="#" th:if="${user != null}">Logou</a>
+    </div>
+</div>
+
+<div th:fragment="langIcon">
+    <a href="?lang=hy">ARM</a>
+    <a href="?lang=ru">RUS</a>
+    <a href="?lang=en">ENG</a>
+</div>
+<div th:fragment="mailto">
+    <a href="mailto:shagoyan99@gmail.com" th:text="#{email.me}"></a>
+</div>
+</body>
+</html>
