@@ -5,19 +5,16 @@
     <title>general</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
 <div th:fragment="menu">
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
         <h5 class="my-0 mr-md-auto font-weight-normal">Blog</h5>
         <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="#">Главная</a>
-            <a class="p-2 text-dark" href="#">Блог</a>
-            <a class="p-2 text-dark" href="#">Про Нас</a>
+            <a class="p-2 text-dark" href="/">Главная</a>
+            <a class="p-2 text-dark" href="/blog">Блог</a>
+            <a class="p-2 text-dark" href="/about">Про Нас</a>
         </nav>
-        <a class="btn btn-outline-primary" href="#" th:if="${user == null}">Sign up</a>
-        <a class="btn btn-outline-primary" href="#" th:if="${user != null}">Logou</a>
     </div>
 </div>
 
@@ -26,8 +23,16 @@
     <a href="?lang=ru">RUS</a>
     <a href="?lang=en">ENG</a>
 </div>
-<div th:fragment="mailto">
-    <a href="mailto:shagoyan99@gmail.com" th:text="#{email.me}"></a>
+<div th:fragment="footer">
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+            <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.5/getting-started/introduction/">getting started guide</a>.</p>
+        </div>
+    </footer>
 </div>
 </body>
 </html>
